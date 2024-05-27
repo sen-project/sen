@@ -17,6 +17,12 @@ app.get("/", async (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// 参数化路由处理程序
+app.get("/:fileName", (req, res) => {
+  const fileName = req.params.fileName;
+  res.sendFile(path.join(__dirname, `${fileName}.html`));
+});
+
 // 更新计数
 app.post("/api/count", async (req, res) => {
   const { action } = req.body;
