@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../../image/logo/favicon.ico" />
+		<title>我爱你💕</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			#text {
+				color: pink;
+				font-size: 30px;
+				z-index: 100;
+				width: auto;
+				height: 50px;
+				position: absolute;
+				bottom: 60px;
+				text-align: center;
+				width: auto;
+				left: 0;
+				right: 0;
+			}
+			
+			#day {
+				color: pink;
+				font-size: 30px;
+				z-index: 100;
+				width: auto;
+				height: 50px;
+				position: absolute;
+				bottom: 20px;
+				text-align: center;
+				width: auto;
+				left: 0;
+				right: 0;
+			}
+			#date {
+				color: pink;
+				font-size: 14px;
+				z-index: 100;
+				width: auto;
+				height: 20px;
+				position: absolute;
+				bottom: 10px;
+				text-align: center;
+				width: auto;
+				left: 0;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/three.min.js"></script>
+		<script src="js/MeshSurfaceSampler.js"></script>
+		<script src="js/TrackballControls.js"></script>
+		<script src="js/simplex-noise.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/script.js"></script>
+		<div id="text">👦丁丰伟💕叶贤慧👧</div>
+		<div id="day"></div>
+		<div id="date">相恋17年11月6日 20:50:20</div>
+	</body>
+</html>
+<script>
+	let start = new Date('2017-11-06');
+	let end = new Date();
+	let usedTime = end.getTime() - start.getTime();
+	let days = Math.floor(usedTime / (24 * 3600 * 1000));
+	document.querySelector('#day').innerText = days+'天';
+</script>

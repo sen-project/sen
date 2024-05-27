@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../../image/logo/favicon.ico" />
+		<title>我爱你💕</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			#text {
+				font-size: 30px;
+				line-height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			#day {
+				font-size: 24px;
+			}
+			#date {
+				font-size: 14px;
+			}
+			.header {
+				width: 35px;
+				border-radius: 50%;
+				margin: 0 10px;
+			}
+			#we_timeline {
+				font-size: 20px;
+				text-align: center;
+			}
+			#we_timeline:visited {
+				color: brown;
+			}
+
+			#container {
+				color: pink;
+				width: 100%;
+				position: absolute;
+				bottom: 10px;
+				overflow: hidden;
+				text-align: center;
+				padding: 5px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/three.min.js"></script>
+		<script src="js/MeshSurfaceSampler.js"></script>
+		<script src="js/TrackballControls.js"></script>
+		<script src="js/simplex-noise.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/script.js"></script>
+
+		<div id="container">
+			<div id="text">
+				<img src="./zsl-header-img.jpg" class="header"> 
+				张嗣龙💕张思佳
+				<img src="./zsj-header-img.jpg" class="header">
+			</div>
+			<div id="day"></div>
+			<div id="we_timeline"><a href="../we_timeline/index.html">🌈我们的大事记</a></div>
+			<div id="date">20231208 以后还会 一直一直在一起的哦💕</div>
+		</div>
+		
+		
+	</body>
+</html>
+<script>
+	let start = new Date('2023-12-08');
+	let end = new Date();
+	let usedTime = end.getTime() - start.getTime();
+	let days = Math.floor(usedTime / (24 * 3600 * 1000));
+	document.querySelector('#day').innerText = '在一起'+days+'天啦';
+</script>
