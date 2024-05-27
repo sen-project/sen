@@ -1,300 +1,512 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="shortcut icon"
-    href="https://static-index-4gtuqm3bfa95c963-1304825656.tcloudbaseapp.com/official-website/favicon.svg"
-    mce_href="https://static-index-4gtuqm3bfa95c963-1304825656.tcloudbaseapp.com/official-website/favicon.svg"
-    type="image/x-icon" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <title>欢迎使用微信云托管</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
-    }
-
-    .title-logo {
-      width: 80px;
-      height: 80px;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media screen and (min-width:1200px) {
-      body .container {
-        margin-top: 160px;
-        margin-bottom: 272px;
-      }
-    }
-
-    @media screen and (max-width:1919px) {
-      body .container {
-        margin-top: 76px;
-        margin-bottom: 128px;
-      }
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .count-button {
-      width: 320px;
-      height: 40px;
-      box-sizing: border-box;
-      margin: 16px 8px;
-      font-weight: 500;
-      font-size: 17px;
-      color: #FFFFFF;
-      letter-spacing: 1px;
-      text-align: center;
-      border-radius: 4px;
-    }
-
-    .count-number {
-      align-self: flex-start;
-      opacity: 0.9;
-      font-weight: 500;
-      font-size: 14px;
-      color: #000000;
-    }
-
-    .count-reset {
-      color: #576b95;
-      cursor: pointer;
-      margin-left: auto;
-    }
-
-    .count-text {
-      width: 320px;
-      height: 40px;
-      padding: 0 12px;
-      margin: 0 auto;
-      line-height: 40px;
-      text-align: left;
-      display: flex;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      opacity: 0.9;
-      box-sizing: border-box;
-      font-weight: 400;
-      font-size: 14px;
-      color: #000000;
-    }
-
-    .quote {
-      font-size: 12px;
-    }
-
-    .qrcode {
-      height: 144px;
-      width: 144px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      width: 320px;
-    }
-
-    .title-text {
-      width: 320px;
-      height: 48px;
-      text-align: center;
-      margin-top: 16px;
-      font-size: 32px;
-      opacity: 0.9;
-      font-weight: 500;
-      font-size: 32px;
-      color: #000000;
-      letter-spacing: 0;
-      line-height: 48px;
-    }
-
-    .counter-container {
-      margin-top: 48px;
-    }
-
-    .hr {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-      height: 20px;
-      line-height: 20px;
-    }
-
-    .hr::after {
-      position: absolute;
-      content: '';
-      top: 10px;
-      left: 60px;
-      width: 200px;
-      border-bottom: 1px solid rgba(0, 0, 0, .1);
-      z-index: -1;
-    }
-
-    .hr small {
-      display: inline-block;
-      background-color: white;
-    }
-
-    .hr-text {
-      display: inline-block;
-      height: 20px;
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.55);
-      letter-spacing: 0;
-      text-align: center;
-      z-index: 2;
-      background-color: white;
-      padding: 0 8px;
-      line-height: 20px;
-    }
-
-    .link-button {
-      width: 154px;
-      height: 48px;
-      box-sizing: border-box;
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.90);
-      letter-spacing: 0;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.03);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card {
-      margin-top: 16px;
-      width: 320px;
-      height: 200px;
-      box-sizing: border-box;
-      border: 1px solid rgba(0, 0, 0, 0.10);
-      border-radius: 5.71px;
-      position: relative;
-    }
-
-    .card-text {
-      text-align: center;
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.55);
-      letter-spacing: 0;
-    }
-  </style>
+	<meta charset="utf-8">
+	<title>qkmango 芒果小洛</title>
+	<script type="text/javascript">
+		const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+		const isForce = /\?force/.test(window.location.href);
+		if (isMobile && !isForce) {
+			window.location.href = 'm/';
+		}
+	</script>
+	<script type="text/javascript" src="js/cookie.js"></script>
+	<script type="text/javascript" src="js/theme.js"></script>
+	<link rel="shortcut icon" href="image/logo/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/clearfix.css" />
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/color.css" />
+	<link rel="stylesheet" type="text/css" href="css/base-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/moon.css" id="theme-css" />
+	<script>loadCssTheme();</script>
+	<link rel="stylesheet" type="text/css" href="css/animate_moon.css" id="animate" />
+	<script>loadAnimateTheme();</script>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="title">
-      <img class="title-logo"
-        src="https://static-index-4gtuqm3bfa95c963-1304825656.tcloudbaseapp.com/official-website/favicon.svg" />
-      <div style="display: inline; margin-bottom: 48px" class="title-text">欢迎使用微信云托管</div>
-    </div>
-    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0">
-      <span class="count-text">
-        <span style="margin-right: 16px;">当前计数:</span>
-        <span class="count-number"></span>
-        <span class="count-reset" onclick="set('clear')">清零</span>
-      </span>
-      <a class="btn btn-success btn-lg count-button" style="background: #07c160; border: 0"
-        onclick="set('inc')">计数+1</a>
-      <div class="card" style="width: 320px; margin-bottom: 48px;">
-        <div class="card-body">
-          <img class="qrcode middle"
-            src="https://qcloudimg.tencent-cloud.cn/raw/89b46988d3cd73d8a56e76a1b82bb377.png" />
-          <small class="card-text" style="display: flex; justify-content: center; margin-top: 8px">扫码加入微信云托管用户群</small>
-        </div>
-      </div>
-      <div>
-        <div class="hr">
-          <span class="hr-text">快速入门</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-top: 16px;">
-          <a class="btn btn-light btn-lg link-button" style="border: 0; box-shadow: none; margin-right: 12px;"
-            href="https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/basic/intro.html" target="_blank"
-            rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-              height="24px" viewBox="0 0 24 24">
-              <title>icons_outline_warrant copy</title>
-              <g id="icons_outline_warrant-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="0.&#x56FE;&#x6807;/&#x7EBF;&#x578B;/icons_outlined_copy">
-                  <rect id="Rectangle" x="0" y="0" width="20" height="20"></rect>
-                  <path
-                    d="M13.9979043,2 L20,8 L20,21.0013542 C20,21.5542301 19.5541613,22 19.0041915,22 L5.99580851,22 C5.44892021,22 5,21.552891 5,21.0013542 L5,2.99864581 C5,2.44576991 5.44583866,2 5.99580851,2 L13.9979043,2 Z M12.399,3.2 L6.2,3.2 L6.2,20.8 L18.8,20.8 L18.8,9.6 L14,9.6 C13.1163444,9.6 12.4,8.8836556 12.4,8 L12.399,3.2 Z M14.2,14.4 L14.2,15.6 L7.8,15.6 L7.8,14.4 L14.2,14.4 Z M17.2,12 L17.2,13.2 L7.8,13.2 L7.8,12 L17.2,12 Z M13.599,3.299 L13.6,8 C13.6,8.2209139 13.7790861,8.4 14,8.4 L18.703,8.4 L13.599,3.299 Z"
-                    id="Combined-Shape" fill-opacity="0.9" fill="#000000"></path>
-                </g>
-              </g>
-            </svg>
-            <span style="margin-left: 4px">开发者文档</span></a>
-          <a class="btn btn-light btn-lg link-button" style="border: 0; box-shadow: none;"
-            href="https://developers.weixin.qq.com/community/business/course/00068c2c0106c0667f5b01d015b80d"
-            target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-              height="24px" viewBox="0 0 24 24">
-              <title>icons_outlined_play</title>
-              <g id="&#x573A;&#x666F;&#x5316;&#x90E8;&#x7F72;" stroke="none" stroke-width="1" fill="none"
-                fill-rule="evenodd">
-                <g id="icons_outlined_play">
-                  <rect id="Rectangle-664" x="0" y="0" width="20" height="20"></rect>
-                  <path
-                    d="M12,20.8 C16.8601058,20.8 20.8,16.8601058 20.8,12 C20.8,7.1398942 16.8601058,3.2 12,3.2 C7.1398942,3.2 3.2,7.1398942 3.2,12 C3.2,16.8601058 7.1398942,20.8 12,20.8 Z M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M10.7,14.8349028 L15.2358445,12 L10.7,9.16509717 L10.7,14.8349028 Z M10.2649995,7.47812467 L16.8216014,11.5760008 C17.0557696,11.722356 17.1269562,12.0308312 16.980601,12.2649995 C16.9403607,12.329384 16.8859859,12.3837588 16.8216014,12.4239992 L10.2649995,16.5218753 C10.0308312,16.6682305 9.72235601,16.5970439 9.57600085,16.3628756 C9.52633472,16.2834098 9.5,16.191586 9.5,16.0978762 L9.5,7.90212382 C9.5,7.62598145 9.72385763,7.40212382 10,7.40212382 C10.0937099,7.40212382 10.1855337,7.42845854 10.2649995,7.47812467 Z"
-                    id="Oval-78" fill-opacity="0.9" fill="#000000"></path>
-                </g>
-              </g>
-            </svg>
-            <span style="margin-left: 4px">视频教程</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="animate">
+		<div>
+			<img src="./image/head.jpg"/>
+			<span>你</span><span>好</span><span>！</span><br>
+			<span>欢</span><span>迎</span><span>来</span><span>到</span><span>我</span><span>的</span><span>主</span><span>页</span>
+		</div>
+	</div>
+	<!-- 背景图 -->
+	<img id="backgroundimg" class="backgroundimg" />
+	<script>
+		loadBgImgTheme();
+	</script>
+	<!-- 顶部导航条 -->
+	<nav class="top-nav" id="top-nav">
+		<!-- <a><img src="image/logo/logo_dynamic2.svg" /></a> -->
+		<a>
+			<svg version="1.1" id="lay1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				x="0px" y="0px" viewBox="0 0 1758 341" style="enable-background:new 0 0 1758 341;" xml:space="preserve">
+				<style type="text/css">
+					.st0 {
+						fill: #43A756;
+					}
+
+					.st1 {
+						fill: #383C92;
+					}
+
+					.icon-path-q {
+						animation: icon-path-q-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-q-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						45% {
+							fill: #00000000;
+						}
+
+						53% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-k {
+						animation: icon-path-k-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-k-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						53% {
+							fill: #00000000;
+						}
+
+						61% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-m {
+						animation: icon-path-m-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-m-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						61% {
+							fill: #00000000;
+						}
+
+						69% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-a {
+						animation: icon-path-a-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-a-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						69% {
+							fill: #00000000;
+						}
+
+						77% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-n {
+						animation: icon-path-n-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-n-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						77% {
+							fill: #00000000;
+						}
+
+						85% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-g {
+						animation: icon-path-g-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-g-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						85% {
+							fill: #00000000;
+						}
+
+						93% {
+							fill: #43A756;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-o {
+						animation: icon-path-o-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-o-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						93% {
+							fill: #00000000;
+						}
+
+						100% {
+							fill: #43A756;
+						}
+					}
+
+					.icon-path-1 {
+						animation: icon-path-1-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-1-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						15% {
+							fill: #383C92;
+						}
+
+						100% {
+							fill: #383C92;
+						}
+					}
+
+					.icon-path-2 {
+						animation: icon-path-2-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-2-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						15% {
+							fill: #00000000;
+						}
+
+						30% {
+							fill: #383C92;
+						}
+
+						100% {
+							fill: #383C92;
+						}
+					}
+
+					.icon-path-3 {
+						animation: icon-path-3-animation 2s ease-in 1 none;
+					}
+
+					@keyframes icon-path-3-animation {
+						0% {
+							fill: #00000000;
+						}
+
+						30% {
+							fill: #00000000;
+						}
+
+						45% {
+							fill: #383C92;
+						}
+
+						100% {
+							fill: #383C92;
+						}
+					}
+				</style>
+				<g>
+					<g>
+						<path class="st0 icon-path-q" d="M486.8,119.1h52.4L498,312.9h-66.3l16-75.1h-2c-5.1,8.2-19.7,23.5-46.9,23.5c-30.3,0-41.5-19-41.5-44.9
+			c0-17.3,5.1-100.6,71.1-100.6c15.3,0,35,3.7,41.5,24.5h2L486.8,119.1z M422.5,215.3c0,8.5,2.4,15.3,9.5,15.3
+			c8.5,0,16.3-8.5,20.1-12.9l12.6-59.2c-3.1-5.1-8.2-11.2-14.6-11.2C429.6,147.3,422.5,200.7,422.5,215.3z" />
+						<path class="st0 icon-path-k"
+							d="M623.8,177.9l75.5-58.8h42.8l-64.6,53l48.3,86.4h-72.4l-33-64.9l-13.6,64.9h-66l45.9-217.6H653L623.8,177.9z" />
+						<path class="st0 icon-path-m" d="M828.1,139.8c0,0,21.8-24.1,56.1-24.1c20.7,0,30.6,10.5,32,24.5h1.7c0,0,24.8-24.5,55.1-24.5
+			c22.4,0,38.1,13.9,38.1,33c0,10.2-4.4,27.5-8.5,46.6l-13.6,63.2H925l17.7-84.7c1.4-6.5,2.7-12.9,2.7-16.7c0-6.1-3.4-10.9-9.9-10.9
+			c-8.2,0-16,7.8-19.7,11.9l-21.1,100.3h-60.5l17.7-84.7c1-5.4,2.7-11.6,2.7-16.3c0-6.5-3.4-11.2-9.9-11.2
+			c-7.8,0-15.6,7.5-19.4,11.6L804,258.5h-66l29.6-139.4h52.7l5.8,20.7H828.1z" />
+						<path class="st0 icon-path-a" d="M1046,131.3c21.8-10.9,43.9-15.6,72.4-15.6c55.1,0,70.7,18,70.7,46.2c0,8.2-1.4,18.7-2.7,25.2l-15.3,71.4h-52
+			l-5.8-20.7h-2c-13.6,15-33.7,23.5-51.3,23.5c-20.7,0-41.5-11.6-41.5-39.1c0-44.9,54.4-49,105.4-49c0.7-4.4,2.7-13.9,2.7-20.1
+			c0-7.5-3.1-15.6-16-15.6c-15,0-21.4,10.2-23.5,22.4h-47.3L1046,131.3z M1120.5,188.1h-5.8c-25.2,0-34.7,14.3-34.7,27.2
+			c0,10.5,6.1,15.6,13.6,15.6c8.8,0,19.7-7.1,21.8-17.7L1120.5,188.1z" />
+						<path class="st0 icon-path-n" d="M1290.2,139.8c0,0,22.1-24.1,55.1-24.1c22.1,0,38.8,12.2,38.8,32c0,11.6-5.4,33.3-8.5,47.6l-13.6,63.2h-65.6
+			l17.7-84.7c1-5.4,2.7-11.6,2.7-16.3c0-6.5-3.4-11.2-9.9-11.2c-7.8,0-15.6,7.5-19.4,11.6L1266,258.5h-66l29.6-139.4h52.7l5.8,20.7
+			H1290.2z" />
+						<path class="st0 icon-path-g" d="M1526.5,119.1h52.4l-26.5,126.1c-8.2,38.4-34,67.7-103.7,67.7c-12.9,0-38.8-1-49.3-1.7l6.1-23.1
+			c13.6,1.7,29.2,1.7,39.8,1.7c25.8,0,33.7-8.2,38.8-33.7l4.1-21.1h-2.4c-5.1,8.2-19.7,23.5-46.9,23.5c-30.3,0-41.5-19-41.5-44.9
+			c0-16.7,4.8-97.9,71.7-97.9c14.3,0,34.3,3.7,40.8,24.5h2L1526.5,119.1z M1462.5,212.9c0,8.2,2.4,15,9.9,15
+			c8.5,0,17.3-9.5,20.1-13.3l11.9-56.4c-3.1-5.1-7.8-10.9-14.3-10.9C1469.7,147.3,1462.5,199,1462.5,212.9z" />
+						<path class="st0 icon-path-o" d="M1739.6,129.3c12.2,9.5,18.4,25.5,18.4,47.3c0,26.9-9.2,49.6-25.8,63.9c-16.3,13.9-39.8,20.7-71.1,20.7
+			c-26.9,0-45.6-5.1-57.1-15.3c-11.9-10.5-18.4-26.9-18.4-47.6c0-27.9,11.9-52,33.3-66.6c16-10.9,36.7-16,64.6-16
+			C1709.4,115.7,1728.1,120.1,1739.6,129.3z M1692.4,156.1c0-11.9-1.7-18.4-9.5-18.4c-23.5,0-32.6,57.5-32.6,80.2
+			c0,13.6,3.4,21.1,11.6,21.1C1683.5,239.1,1692.4,183.3,1692.4,156.1z" />
+					</g>
+				</g>
+				<g>
+					<path class="st1 icon-path-1" d="M175.1,341h-32c-14.9,0-27.1-12.1-27.1-27.1V27.3c0-14.9,12.1-27.1,27.1-27.1h32c14.9,0,27.1,12.1,27.1,27.1
+		v286.6C202.2,328.9,190,341,175.1,341z" />
+					<path class="st1 icon-path-2" d="M299.1,71.5l16,27.7c7.5,12.9,3,29.5-9.9,37L56.9,279.4c-12.9,7.5-29.5,3-37-9.9L4,241.8
+		c-7.5-12.9-3-29.5,9.9-37L262.1,61.6C275,54.1,291.6,58.5,299.1,71.5z" />
+					<path class="st1 icon-path-3" d="M315,241.8l-16,27.7c-7.5,12.9-24,17.4-37,9.9L13.9,136.1c-12.9-7.5-17.4-24-9.9-37l16-27.7
+		c7.5-12.9,24-17.4,37-9.9l248.2,143.3C318.1,212.3,322.5,228.9,315,241.8z" />
+				</g>
+			</svg>
+		</a>
+
+		<div class="sun-moon" id="switch-btn">
+			<span class="iconfont" id="switch-img" title="主题切换">&#xe624;</span>
+		</div>
+	</nav>
+	<script>
+		loadChangeThemeBtn();
+	</script>
+
+	<div class="photopage style">
+		<div class="tip-text-box">
+			<span class="tip-text">Anhui Xinhua University</span>
+		</div>
+		<a><img src="" id="header_img" /></a>
+		<!-- 随机图片 -->
+		<script>
+			let x = 0;
+			let y = 1;
+			var randomNum = Math.round(Math.random() * (y - x) + x);
+			document.getElementById('header_img').src = 'image/header_img/' + randomNum + '.jpg';
+		</script>
+	</div>
+
+
+	<!-- 展示页面 -->
+	<div class="show-page style">
+		<div class="show-page-box">
+			<span class="tip-text">我的页面</span>
+		</div>
+		<ul class="site-ul-box">
+			<!-- <a class="site-li-box style hover-style" href="./md/have_a_love_affair/index.html" target="_blank">
+				<img src="image/show_page/画一个故事.png" />
+				<span style="font-size: 14px;">画一个故事</span>
+			</a>
+			<a class="site-li-box style hover-style" href="./page/heart_beat/index.html" target="_blank">
+				<img src="image/show_page/loving_heart.png" />
+				<span style="font-size: 14px;">我爱你</span>
+			</a> -->
+			<a class="site-li-box style hover-style" href="./page/fireworks2/" target="_blank">
+				<img src="image/show_page/烟花.png" />
+				<span style="font-size: 14px;">烟花</span>
+			</a>
+			<a class="site-li-box style hover-style" href="./page/aboutme.html" target="_blank">
+				<img src="image/head.jpg" />
+				<span style="font-size: 14px;">关于我</span>
+			</a>
+		</ul>
+	</div>
+
+
+
+	<!-- 我的站点 -->
+	<div class="offen-use-site style">
+		<div class="tip-text-box">
+			<span class="tip-text">我的站点</span>
+		</div>
+
+		<ul class="site-ul-box">
+			<a class="site-li-box style hover-style" href="https://blog.csdn.net/qq_42179997" target="_blank">
+				<span class="iconfont">&#xe638;</span>
+				<span>CSDN</span>
+			</a>
+			<a class="site-li-box style hover-style" href="https://github.com/qkmango/" target="_blank">
+				<span class="iconfont">&#xea0b;</span>
+				<span>GitHub</span>
+			</a>
+			<a class="site-li-box style hover-style" href="https://gitee.com/qkmango" target="_blank">
+				<span class="iconfont">&#xe686;</span>
+				<span>Gitee</span>
+			</a>
+			<a class="site-li-box style hover-style" href="https://weibo.com/u/5925552385" target="_blank">
+				<span class="iconfont">&#xe73c;</span>
+				<span>微博</span>
+			</a>
+			<a class="site-li-box style hover-style" href="https://www.zhihu.com/people/qkmango" target="_blank">
+				<span class="iconfont">&#xe635;</span>
+				<span>知乎</span>
+			</a>
+			<a class="site-li-box style hover-style"
+				href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=yvj68-P__fj6_PuKu7vkqaWn" target="_blank">
+				<span class="iconfont">&#xe62c;</span>
+				<span>邮箱</span>
+			</a>
+			<a class="site-li-box style hover-style"
+				href="https://www.douyin.com/user/MS4wLjABAAAAcgLke9dr8MiKOlFHoKCKGxHUyzKvXJ6d_3E983dL4Gc"
+				target="_blank">
+				<span class="iconfont">&#xe66e;</span>
+				<span>抖音</span>
+			</a>
+			<a class="site-li-box style hover-style"
+				href="https://www.xiaohongshu.com/user/profile/620a5d3a0000000010009416" target="_blank">
+				<span class="iconfont">&#xe617;</span>
+				<span>小红书</span>
+			</a>
+		</ul>
+	</div>
+
+	<!-- 案例、学习笔记、Java api、实验报告最外层不可见box -->
+	<div class="case-max-box">
+
+		<div class="case-ul-box style">
+			<div class="tip-text-box">
+				<span class="tip-text">学习笔记</span>
+			</div>
+			<div class="case-li-box">
+				<a class="case-li hover-style style" href="https://blog.csdn.net/qq_42179997/article/details/108778269"
+					target="_blank">HTML基础学习笔记 AllInOne</a>
+				<a class="case-li hover-style style" href="https://blog.csdn.net/qq_42179997/article/details/108778358"
+					target="_blank">CSS基础学习笔记</a>
+				<a class="case-li hover-style style" href="https://blog.csdn.net/qq_42179997/article/details/106418029"
+					target="_blank">Linux学习笔记 AllInOne</a>
+				<a class="case-li hover-style style" href="https://blog.csdn.net/qq_42179997/article/details/106418059"
+					target="_blank">JavaSE基础学习笔记 AllInOne</a>
+			</div>
+
+		</div>
+
+		<div class="case-ul-box style last">
+			<div class="tip-text-box">
+				<span class="tip-text">我的开源</span>
+			</div>
+			<div class="case-li-box" id="os-box"></div>
+		</div>
+	</div>
+
+
+	<div class="big-quote">
+		<div>
+			<!-- <img src="image/quote.svg"> -->
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.61 86.92">
+				<defs>
+					<style>
+						.cls-1 {
+							fill: var(--theme_color);
+						}
+					</style>
+				</defs>
+				<title>quote</title>
+				<g id="Layer_2" data-name="Layer 2">
+					<g id="Layer_1-2" data-name="Layer 1">
+						<path class="cls-1"
+							d="M21.08,43.08V46H40.92V86.92H0V46.31Q0,0,40.92,0V17.23q-10.45,1.69-15.15,7.92T21.08,43.08Z" />
+						<path class="cls-1"
+							d="M80.77,43.08V46h19.84V86.92H59.84V46.31Q59.84,0,100.61,0V17.23Q80.76,19.84,80.77,43.08Z" />
+					</g>
+				</g>
+			</svg>
+			<p>永远相信</p>
+			<p>美好的事情即将发生</p>
+
+			<div id="yiyan">
+				<a target="_blank">
+					<span class="iconfont link">&#xe600;</span>
+					<span class="context"></span>
+				</a>
+			</div>
+		</div>
+
+
+	</div>
+
+	<!-- 页面脚 -->
+	<footer class="footer">
+		<div class="info">
+			<img src="image/logo/logo.svg" class="logo" />
+			<div class="describe">
+				<p>如果你感兴趣或者你也在学习Java，那么可以找我一起学习哦~</p>
+				<p>
+					<a href="http://qkmango.cn" target="_blank"><span class="iconfont">&#xe600;</span>个人主页
+						qkmango.cn</a>
+					<a href="#?force" target="_blank"><span class="iconfont">&#xe600;</span>电脑端</a>
+					<a href="./m/?force" target="_blank"><span class="iconfont">&#xe600;</span>手机端</a><br />
+					<!-- <a href="page/resume.html" target="_blank"><span class="iconfont">&#xe600;</span>我的简历 Resume</a> -->
+					<a href="page/aboutme.html" target="_blank"><span class="iconfont">&#xe600;</span>关于我</a><br />
+					<a href="page/christmas/" target="_blank"><span class="iconfont">&#xe600;</span>圣诞树</a>
+					<a href="page/fireworks/" target="_blank" id="fireworks" class="xin"><span
+							class="iconfont">&#xe600;</span>烟花</a>
+					<a href="page/fireworks2/" target="_blank" class="xin"><span class="iconfont">&#xe600;</span>烟花2</a>
+					<a href="page/love/" target="_blank"><span class="iconfont">&#xe600;</span>爱心</a>
+					<!-- <a href="page/heart_beat/" target="_blank"><span class="iconfont">&#xe600;</span>跳动的❤</a> -->
+					<!-- <a href="md/have_a_love_affair/index.html" target="_blank"><span
+							class="iconfont">&#xe600;</span>画一个故事</a><br /> -->
+					<a  href="./page/logo.html" target="_blank"><span class="iconfont">&#xe600;</span>logo动画</a>
+				</p>
+			</div>
+			<div class="describe">
+				<span>qkmango.cn 版权所有</span>
+				<a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002642号-2</a>
+				<span>HomePage</span>
+			</div>
+		</div>
+		<div class="links">
+			<span>我的高中 <a href="http://210.45.32.7/xiweb/fz/">阜阳师范大学附属中学</a></span>
+			<div>@安：大爱附中的小小校园，别人总问你们学校这么小为什么总能培养出很多很多德才兼备的孩子，别人不懂得，但是我们肯定知道，我们拥有的是认真负责的老师，我们有温柔体贴的校长</div><br />
+			<span>我的大学 <a href="https://www.axhu.edu.cn/">安徽新华学院</a></span>
+			<div>再说一遍，我不会修电脑，我是安徽新华学院的学生，不是新华电脑的学生啊！</div>
+		</div>
+	</footer>
+
+	<!-- 引入index.js文件 -->
+	<script src="js/utils.js"></script>
+	<script src="js/index.js"></script>
 </body>
-<script src="https://mat1.gtimg.com/www/asset/lib/jquery/jquery/jquery-1.11.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script>
-  init();
-  function init() {
-    $.ajax("/api/count", {
-      method: "get",
-    }).done(function (res) {
-      if (res && res.data !== undefined) {
-        $(".count-number").html(res.data);
-      }
-    });
-  }
-  function set(action) {
-    $.ajax("/api/count", {
-      method: "POST",
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      data: JSON.stringify({
-        action: action,
-      }),
-    }).done(function (res) {
-      if (res && res.data !== undefined) {
-        $(".count-number").html(res.data);
-      }
-    });
-  }
-</script>
 
 </html>
