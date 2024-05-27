@@ -1,0 +1,30 @@
+/* 基础样式 */
+
+* {
+	font-size: 0;
+	transition: background-color .5s;
+	transition: color .3s;
+}
+
+*::selection{
+	background-color: var(--theme_color);
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+html,body{
+	height: 100%;
+}
+
+body {
+	flex-direction:column;
+	justify-content:center;
+	background-color: var(--bgcolor_moon);
+}
+
+a,li,footer,form,*{
+	font-family: "Microsoft YaHei";
+}

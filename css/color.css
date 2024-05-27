@@ -1,0 +1,21 @@
+:root {
+    --green_1:#2ebc4f;
+    --green_2:#6db33f;
+    --green_3:#1aaf5d;
+    --green_4:#42b983;
+    --green_4_a: rgba(66,185,131,0.2);
+    --green_4_a5: rgba(66,185,131,0.5);
+	
+	/* 新增色，使用此颜色 */
+	--green_5:#43a756;
+	--green_5_a2:rgba(67, 167, 85, 0.2);
+	
+	--blue_1:rgb(41, 151, 255);
+	--blue_2:#0779E4;
+	--orange:#ff5500;
+	--bgcolor_moon:#090724;
+	--bgcolor_sun:#f6f8fa;
+	--footer:#545462;
+	
+	--theme_color:var(--green_5);
+}

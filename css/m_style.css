@@ -1,0 +1,257 @@
+@import url(font.css);
+
+:root {
+    --gray-forecolor: rgba(0, 0, 0, 0.72);
+    --cmx-pink: #af526e;
+}
+
+* {
+    font-size: 0;
+}
+
+p::selection,
+a::selection,
+span::selection {
+    color: #fff;
+    background-color: var(--green_3);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+body {
+    background-image: url(../image/background/m-background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.box-common {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* ====顶部导航==== */
+#top_nav {
+    z-index: 1;
+    height: 70px;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+}
+
+#top_nav > svg {
+    height: 100%;
+}
+
+/* ====欢迎文字==== */
+#welcome_box {
+    height: calc(100% - 90px);
+    height: 100%;
+    padding-top: 120px;
+    box-sizing: border-box;
+    animation-name: welcome_animation;
+    animation-duration: 2s;
+    text-align: center;
+    background-image: url(../image/header_img/cloud.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    margin-bottom: 20px;
+    transition: 1s;
+    font-family: 'Alimama_ShuHeiTi', 'microsoft yahei';
+}
+
+#welcome_box > img {
+    width: 50%;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--green_4_a);
+}
+
+#welcome_title {
+    text-align: center;
+    font-size: 100px;
+    line-height: 1.3;
+    font-weight: bold;
+    color: #fff;
+    animation-name: welcome_title_animation;
+    animation-duration: 2s;
+}
+
+@keyframes welcome_animation {
+    0% {
+        height: 100%;
+    }
+
+    15% {
+        height: 85%;
+    }
+
+    30% {
+        background-image: url(../image/header_img/cloud_source.jpg);
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    100% {
+        background-image: url(../image/header_img/cloud.jpg);
+    }
+}
+
+@keyframes welcome_title_animation {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: #fff;
+    }
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--gray-forecolor);
+    margin: 20px;
+}
+
+/* ====上部图片==== */
+#header_img_box {
+    width: 100%;
+    overflow: hidden;
+    width: calc(100% - 40px);
+    margin: 20px;
+    border-radius: 30px;
+}
+
+#header_img_box > img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+#header_img_box:hover > img {
+    transform: scale(1.1);
+}
+
+/* ====我的站点==== */
+.website {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.website > .website_item {
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.website > .website_item:hover {
+    /* background-color: var(--green_5); */
+    background-color: var(--cmx-pink);
+}
+
+.website > .website_item span {
+    font-size: 150px;
+}
+
+/* 各个站点的logo icon颜色 */
+.website > .website_item.csdn > a > span {
+    color: #fc1944;
+}
+
+.website > .website_item.github > a > span {
+    color: #3e75c3;
+}
+
+.website > .website_item.gitee > a > span {
+    color: #c71d23;
+}
+
+.website > .website_item.weibo > a > span {
+    color: #eb7350;
+}
+
+.website > .website_item.zhihu > a > span {
+    color: #1772f6;
+}
+
+.website > .website_item.douyin > a > span {
+    color: #060716;
+}
+
+.website > .website_item.email > a > span {
+    color: #3a3a3a;
+}
+
+.website > .website_item.xhs > a > span {
+    color: #ff2543;
+}
+
+/* ====一言==== */
+#yiyan {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+#yiyan:hover {
+    background-color: var(--cmx-pink);
+}
+
+#yiyan:hover > span {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#yiyan > span {
+    color: var(--gray-forecolor);
+    font-size: 40px;
+    line-height: 1.3;
+    transition: 0.5s;
+}
+
+#yiyan > span:nth-child(2) {
+    margin-right: 10px;
+}
+
+/* ====页脚footer==== */
+#footer {
+    margin: 20px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+#tell,
+#page_link,
+#describe,
+#footer a,
+#footer a > .iconfont,
+#school_link {
+    font-size: 40px;
+    line-height: 1.4;
+    color: var(--gray-forecolor);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#footer a:hover,
+#footer a:hover > .iconfont {
+    text-decoration: underline;
+    color: var(--cmx-pink);
+}
