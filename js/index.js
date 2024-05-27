@@ -94,7 +94,7 @@ function toLovePage() {
 			y = 89;
 		}
 		if (z == 90 && y == 89) {
-			window.location = "./page/love/"
+			window.location = "/page/love/"
 		}
 	}
 	document.onkeyup = function () {
